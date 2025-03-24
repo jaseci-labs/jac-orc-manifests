@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: $g{name:"jac-cloud"}
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
 spec:
   selector:
     pod: $g{name:"jac-cloud"}
@@ -15,7 +15,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: $g{name:"jac-cloud"}-envs
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
 type: Opaque
 stringData:
   - $d{env-vars:{}}
@@ -24,7 +24,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: $g{name:"jac-cloud"}
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
   annotations:
     reloader.stakater.com/auto: "true"
 spec:

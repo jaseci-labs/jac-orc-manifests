@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: $g{name:"jac-redis"}
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
 spec:
   selector:
     pod: $g{name:"jac-redis"}
@@ -15,7 +15,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: $g{name:"jac-redis"}
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
 spec:
   replicas: 1
   selector:
@@ -57,7 +57,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: $g{name:"jac-redis"}
-  namespace: $g{namespace:"default"}
+  namespace: $g{namespace}
 data:
   redis-config: |
     maxmemory $g{memory:"1000mb"}
