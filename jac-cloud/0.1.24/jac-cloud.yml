@@ -80,7 +80,7 @@ spec:
               $a{
                 args:[
                   "mkdir app && cd app",
-                  "apt-get update && apt-get install -y --no-install-recommends git",
+                  "apt-get update && apt-get install -y --no-install-recommends git build-essential",
                   "git clone --depth 1 https://github.com/Jaseci-Labs/littleX.git .",
                   "pip install -r ./littleX_BE/requirements.txt openai",
                   "jac serve ./littleX_BE/littleX.jac"
