@@ -89,7 +89,7 @@ spec:
               chmod 644 /etc/apt/sources.list.d/kubernetes.list
               apt update && apt install -y kubectl
               git clone --depth 1 https://github.com/Jaseci-Labs/jac-orc-manifests.git /tmp/manifests
-              git clone --depth 1 -b enhancements/pod-manager-2 https://github.com/Jaseci-Labs/jaseci.git
+              git clone --depth 1 -b jac-orc https://github.com/Jaseci-Labs/jaseci.git
               cd jaseci/jac-splice-orc
               pip install poetry && poetry install && poetry run prod
           envFrom:
