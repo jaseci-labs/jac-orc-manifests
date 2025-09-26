@@ -89,6 +89,15 @@ spec:
           envFrom:
             - secretRef:
                 name: $g{name:"jac-cloud"}-envs
+          readinessProbe:
+            failureThreshold: $g{readiness-failure-threshold:5}
+            httpGet:
+              path: $g{readiness-path:"/healthz"}
+              port: $g{readiness-port:"http"}
+            initialDelaySeconds: $g{readiness-initial-delay:10}
+            periodSeconds: $g{readiness-period:10}
+            successThreshold: $g{readiness-success-threshold:1}
+            timeoutSeconds: $g{readiness-timeout:5}
           resources:
             limits:
               cpu: $g{cpu-limit:1}
