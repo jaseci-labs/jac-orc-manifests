@@ -5,7 +5,7 @@ metadata:
   namespace: $g{namespace}
 spec:
   selector:
-    pod: $g{name:"jac-cloud"}
+    app: $g{name:"jac-cloud"}
   ports:
     - protocol: TCP
       port: 80
