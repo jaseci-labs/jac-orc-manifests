@@ -104,7 +104,7 @@ spec:
             failureThreshold: 5
             httpGet:
               path: /healthz
-              port: http
+              port: 8000
             initialDelaySeconds: 10
             periodSeconds: 10
             successThreshold: 1

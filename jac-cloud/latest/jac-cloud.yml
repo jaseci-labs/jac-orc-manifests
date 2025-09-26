@@ -92,7 +92,7 @@ spec:
             failureThreshold: $g{readiness-failure-threshold:5}
             httpGet:
               path: $g{readiness-path:"/healthz"}
-              port: $g{readiness-port:"http"}
+              port: $g{readiness-port:8000}
             initialDelaySeconds: $g{readiness-initial-delay:10}
             periodSeconds: $g{readiness-period:10}
             successThreshold: $g{readiness-success-threshold:1}
